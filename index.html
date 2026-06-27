@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920">
+<title>Agapé Christian Centre — Membership Registration</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="canvas">
+
+  <!-- LEFT PANEL -->
+  <div class="panel left-panel">
+
+    <div class="left-content">
+
+      <div class="logo-block">
+        <img src="assets/agape-logo.jpeg" alt="Agapé Christian Centre" class="agape-logo">
+      </div>
+
+      <div class="church-name-block">
+        <p class="church-name">Agapé Christian Centre</p>
+        <div class="tagline-row">
+          <span class="tagline-dot"></span>
+          <span class="tagline">A New Day · A New Generation</span>
+          <span class="tagline-dot"></span>
+        </div>
+      </div>
+
+      <div class="divider"></div>
+
+      <h1 class="welcome-heading">Welcome<br>Home!</h1>
+
+      <p class="welcome-sub">We're so glad you're here today.</p>
+
+      <p class="instruction-text">
+        Complete your <strong>Agapé Membership Registration</strong><br>
+        by scanning the QR code on the right.
+      </p>
+
+      <div class="why-row">
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <span>Join the family</span>
+        </div>
+        <div class="why-sep"></div>
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/>
+              <path d="M13.73 21a2 2 0 0 1-3.46 0"/>
+            </svg>
+          </div>
+          <span>Stay connected</span>
+        </div>
+        <div class="why-sep"></div>
+        <div class="why-item">
+          <div class="why-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <span>Safe &amp; private</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- RIGHT PANEL -->
+  <div class="panel right-panel">
+
+    <div class="right-content">
+
+      <div class="scan-badge">
+        <span class="scan-badge-line"></span>
+        <svg class="scan-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <polyline points="4 8 4 4 8 4"/><polyline points="16 4 20 4 20 8"/>
+          <polyline points="20 16 20 20 16 20"/><polyline points="8 20 4 20 4 16"/>
+        </svg>
+        <span class="scan-badge-text">Scan to Register</span>
+        <span class="scan-badge-line"></span>
+      </div>
+
+      <div class="qr-frame">
+        <img src="assets/qr-code.png" alt="QR Code — Agapé Membership Registration" class="qr-image" id="qrImage">
+        <div class="qr-missing" id="qrMissing">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none">
+            <rect x="4" y="4" width="24" height="24" rx="3" stroke="#3C8CC8" stroke-width="3" fill="none"/>
+            <rect x="9" y="9" width="14" height="14" rx="1" fill="#3C8CC8"/>
+            <rect x="36" y="4" width="24" height="24" rx="3" stroke="#3C8CC8" stroke-width="3" fill="none"/>
+            <rect x="41" y="9" width="14" height="14" rx="1" fill="#3C8CC8"/>
+            <rect x="4" y="36" width="24" height="24" rx="3" stroke="#3C8CC8" stroke-width="3" fill="none"/>
+            <rect x="9" y="41" width="14" height="14" rx="1" fill="#3C8CC8"/>
+            <rect x="36" y="36" width="10" height="10" rx="1" fill="#3C8CC8"/>
+            <rect x="54" y="36" width="10" height="10" rx="1" fill="#3C8CC8"/>
+            <rect x="36" y="54" width="10" height="10" rx="1" fill="#3C8CC8"/>
+            <rect x="54" y="54" width="10" height="10" rx="1" fill="#3C8CC8"/>
+          </svg>
+          <p>Place QR code image at<br><code>assets/qr-code.jpeg</code></p>
+        </div>
+      </div>
+
+      <div class="time-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+        </svg>
+        Takes only 3–5 minutes
+      </div>
+
+      <p class="qr-caption">
+        Point your phone camera at the QR code.<br>
+        <strong>No app needed</strong> it opens automatically.
+      </p>
+
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <img src="assets/data-insights-by-ray-logo.jpeg" alt="Data Insights by Ray" class="footer-logo">
+    <span class="footer-sep"></span>
+    <span class="footer-label">Powered by</span>
+    <span class="footer-brand">Data Insights by Ray™</span>
+  </footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
