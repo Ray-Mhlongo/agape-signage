@@ -1,378 +1,315 @@
-*, *::before, *::after {
+* {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
-:root {
-  --agape-blue:       #3B8CC8;
-  --agape-blue-dark:  #1A5C9A;
-  --agape-blue-light: #5AAEDD;
-  --agape-blue-pale:  #D6ECFA;
-  --agape-blue-tint:  #EEF7FD;
-  --white:            #FFFFFF;
-  --text-dark:        #0D2A45;
-  --text-mid:         #2A5070;
-  --text-light:       #6A9CB8;
-  --footer-h:         56px;
-}
-
-html, body {
-  width: 1920px;
-  height: 1080px;
-  overflow: hidden;
-  background: #1a1a1a;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-}
-
-.canvas {
-  width: 1920px;
-  height: 1080px;
-  display: flex;
-  position: relative;
-  background: var(--white);
-}
-
-/* ── PANELS ─────────────────────────────────────────────────── */
-.panel {
-  height: calc(1080px - var(--footer-h));
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.left-panel {
-  width: 820px;
-  background: var(--white);
-  border-right: 2px solid var(--agape-blue-pale);
-  flex-shrink: 0;
-}
-
-.right-panel {
-  flex: 1;
-  background: var(--agape-blue-tint);
-}
-
-/* ── LEFT CONTENT ────────────────────────────────────────────── */
-.left-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 0 72px;
-}
-
-.logo-block {
-  margin-bottom: 20px;
-}
-
-.agape-logo {
-  width: 200px;
-  height: 200px;
-  object-fit: contain;
-  display: block;
-}
-
-.church-name-block {
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.church-name {
-  font-size: 17px;
-  font-weight: 800;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--agape-blue-dark);
-  margin-bottom: 8px;
-}
-
-.tagline-row {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.tagline-dot {
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: var(--agape-blue-light);
-  display: inline-block;
-  flex-shrink: 0;
-}
-
-.tagline {
-  font-size: 12px;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: var(--agape-blue-light);
-}
-
-.divider {
-  width: 64px;
-  height: 2px;
-  background: var(--agape-blue-pale);
-  border-radius: 2px;
-  margin-bottom: 24px;
-}
-
-/* ── WELCOME ─────────────────────────────────────────────────── */
-.welcome-heading {
-  font-size: 96px;
-  font-weight: 900;
-  line-height: 0.92;
-  letter-spacing: -0.04em;
-  color: var(--agape-blue-dark);
-  text-align: center;
-  margin-bottom: 18px;
-}
-
-.welcome-sub {
-  font-size: 20px;
-  font-weight: 400;
-  font-style: italic;
-  color: var(--text-mid);
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.instruction-text {
-  font-size: 18px;
-  font-weight: 400;
-  color: var(--text-mid);
-  text-align: center;
-  line-height: 1.6;
-  margin-bottom: 36px;
-}
-
-.instruction-text strong {
-  font-weight: 700;
-  color: var(--agape-blue-dark);
-}
-
-/* ── WHY ROW ─────────────────────────────────────────────────── */
-.why-row {
-  display: flex;
-  align-items: center;
-  gap: 0;
-  border: 1.5px solid var(--agape-blue-pale);
-  border-radius: 16px;
-  overflow: hidden;
-  background: var(--agape-blue-tint);
-  width: 100%;
-}
-
-.why-item {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  padding: 20px 12px;
-}
-
-.why-item span {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--agape-blue-dark);
-  text-align: center;
-  letter-spacing: 0.02em;
-}
-
-.why-icon {
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  border: 1.5px solid var(--agape-blue);
-  background: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--agape-blue-dark);
-}
-
-.why-icon svg {
-  width: 22px;
-  height: 22px;
-}
-
-.why-sep {
-  width: 1px;
-  height: 60px;
-  background: var(--agape-blue-pale);
-  flex-shrink: 0;
-}
-
-/* ── RIGHT CONTENT ───────────────────────────────────────────── */
-.right-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 0 60px;
-}
-
-/* ── SCAN BADGE ──────────────────────────────────────────────── */
-.scan-badge {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  background: var(--agape-blue-dark);
-  color: var(--white);
-  padding: 12px 36px;
-  border-radius: 999px;
-  margin-bottom: 32px;
-  box-shadow: 0 4px 20px rgba(26, 92, 154, 0.3);
-}
-
-.scan-badge-text {
-  font-size: 16px;
-  font-weight: 800;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-}
-
-.scan-badge-line {
-  width: 32px;
-  height: 2px;
-  background: rgba(255,255,255,0.35);
-  border-radius: 2px;
-  flex-shrink: 0;
-}
-
-.scan-icon {
-  width: 20px;
-  height: 20px;
-  flex-shrink: 0;
-}
-
-/* ── QR FRAME ────────────────────────────────────────────────── */
-.qr-frame {
-  width: 560px;
-  height: 560px;
-  border-radius: 24px;
-  border: 3px solid var(--agape-blue);
-  background: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  margin-bottom: 28px;
-  box-shadow: 0 8px 40px rgba(59, 140, 200, 0.18), 0 2px 12px rgba(0,0,0,0.06);
-  position: relative;
-}
-
-.qr-image {
+html,
+body {
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
-  display: block;
+  margin: 0;
+  overflow: hidden;
+  background: #ffffff;
+  color: #053985;
+  font-family: "Montserrat", Arial, sans-serif;
 }
 
-.qr-missing {
-  display: none;
+body {
+  display: grid;
+  place-items: center;
+}
+
+.signage {
+  position: relative;
+  width: min(100vw, 177.7778vh);
+  height: min(100vh, 56.25vw);
+  min-width: min(100vw, 177.7778vh);
+  min-height: min(100vh, 56.25vw);
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 28% 37%, rgba(0, 72, 158, 0.06), rgba(255, 255, 255, 0) 25%),
+    radial-gradient(circle at 74% 45%, rgba(0, 72, 158, 0.05), rgba(255, 255, 255, 0) 26%),
+    #ffffff;
+  box-shadow: 0 0 0 1px rgba(5, 57, 133, 0.04);
+}
+
+.leftSide,
+.rightSide {
+  position: absolute;
+  top: 0;
+  height: 91.5%;
+}
+
+.leftSide {
+  left: 0;
+  width: 49.4%;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
-  text-align: center;
-  color: var(--agape-blue);
+  padding-top: 2.7%;
 }
 
-.qr-missing p {
-  font-size: 14px;
-  color: var(--text-light);
-  line-height: 1.5;
-}
-
-.qr-missing code {
-  font-size: 12px;
-  background: var(--agape-blue-pale);
-  padding: 2px 8px;
-  border-radius: 4px;
-  color: var(--agape-blue-dark);
-}
-
-/* ── TIME PILL ───────────────────────────────────────────────── */
-.time-pill {
+.rightSide {
+  right: 0;
+  width: 50.6%;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  background: var(--agape-blue);
-  color: var(--white);
-  font-size: 16px;
-  font-weight: 600;
-  padding: 11px 28px;
-  border-radius: 999px;
-  margin-bottom: 22px;
+  padding-top: 5.35%;
+}
+
+.churchLogo {
+  display: block;
+  width: 23.5%;
+  height: auto;
+  margin-bottom: 1.2%;
+}
+
+.churchName {
+  margin: 0 0 0.9%;
+  color: #063985;
+  font-size: clamp(12px, 1.48vw, 28px);
+  font-weight: 700;
+  letter-spacing: 0.29em;
+}
+
+h1 {
+  margin: 0;
+  color: #043d91;
+  font-size: clamp(54px, 6.25vw, 120px);
+  font-weight: 900;
+  line-height: 0.98;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+.welcomeNote {
+  margin: 0.9% 0 1.1%;
+  color: #063985;
+  font-size: clamp(14px, 1.48vw, 28px);
+  font-style: italic;
+  font-weight: 500;
   letter-spacing: 0.02em;
 }
 
-.time-pill svg {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
+.smallRule {
+  width: 4.7%;
+  height: 2px;
+  margin-bottom: 1.25%;
+  background: #1c82d1;
 }
 
-/* ── QR CAPTION ──────────────────────────────────────────────── */
-.qr-caption {
-  font-size: 17px;
-  font-weight: 400;
-  color: var(--text-mid);
+.registrationCopy {
+  margin: 0;
+  color: #063985;
+  font-size: clamp(13px, 1.32vw, 25px);
+  font-weight: 500;
+  line-height: 1.55;
   text-align: center;
-  line-height: 1.65;
 }
 
-.qr-caption strong {
-  font-weight: 700;
-  color: var(--agape-blue-dark);
+.registrationCopy strong {
+  font-weight: 800;
 }
 
-/* ── FOOTER ──────────────────────────────────────────────────── */
-.footer {
+.benefits {
   position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: var(--footer-h);
-  background: var(--agape-blue-dark);
+  left: 8.2%;
+  right: 8.2%;
+  bottom: 6.2%;
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr 1px 1fr;
+  align-items: center;
+}
+
+.benefit {
   display: flex;
+  min-width: 0;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 14px;
-  z-index: 10;
-}
-
-.footer-logo {
-  height: 30px;
-  width: auto;
-  object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.85;
-}
-
-.footer-sep {
-  width: 1px;
-  height: 22px;
-  background: rgba(255,255,255,0.2);
-}
-
-.footer-label {
-  font-size: 10px;
+  color: #053985;
+  font-size: clamp(12px, 1.28vw, 25px);
   font-weight: 500;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.45);
+  text-align: center;
+  white-space: nowrap;
 }
 
-.footer-brand {
-  font-size: 13px;
+.benefitDivider {
+  width: 1px;
+  height: clamp(70px, 7.6vw, 146px);
+  background: #177dd0;
+  opacity: 0.72;
+}
+
+.roundIcon {
+  display: grid;
+  place-items: center;
+  width: clamp(48px, 5.25vw, 101px);
+  height: clamp(48px, 5.25vw, 101px);
+  border: 2px solid #053985;
+  border-radius: 50%;
+}
+
+svg {
+  display: block;
+}
+
+.roundIcon svg,
+.tipIcon svg,
+.scanBadge svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.roundIcon svg {
+  width: 58%;
+  height: 58%;
+}
+
+.verticalRule {
+  position: absolute;
+  left: 49.9%;
+  top: 11.3%;
+  width: 3px;
+  height: 73.4%;
+  background: #043d91;
+}
+
+.scanBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(14px, 2.1vw, 40px);
+  width: 66.5%;
+  height: 7.2%;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #064aa2 0%, #003987 100%);
+  color: #ffffff;
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.22);
+}
+
+.scanBadge svg {
+  width: clamp(26px, 3vw, 58px);
+  height: clamp(26px, 3vw, 58px);
+  stroke-width: 3;
+}
+
+.scanBadge span {
+  font-size: clamp(17px, 2.06vw, 40px);
   font-weight: 700;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.88);
+  letter-spacing: 0.18em;
+  white-space: nowrap;
+}
+
+.qrFrame {
+  display: grid;
+  place-items: center;
+  width: 57.5%;
+  aspect-ratio: 1;
+  margin-top: 3.2%;
+  padding: 1.25%;
+  border: clamp(4px, 0.43vw, 8px) solid #043d91;
+  border-radius: clamp(18px, 2.35vw, 45px);
+  background: #ffffff;
+}
+
+.qrFrame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.qrTips {
+  width: 65%;
+  margin-top: 3.1%;
+  color: #053985;
+}
+
+.qrTips p {
+  display: grid;
+  grid-template-columns: clamp(34px, 3.4vw, 65px) 1fr;
+  align-items: center;
+  min-height: clamp(34px, 3.4vw, 65px);
+  margin: 0 0 0.7%;
+  font-size: clamp(13px, 1.38vw, 27px);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.tipIcon {
+  display: grid;
+  place-items: center;
+  width: clamp(28px, 2.85vw, 55px);
+  height: clamp(28px, 2.85vw, 55px);
+  color: #053985;
+}
+
+.tipIcon svg {
+  width: 82%;
+  height: 82%;
+  stroke-width: 3;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 8.5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2%;
+  background: linear-gradient(90deg, #003984 0%, #064aa2 55%, #003984 100%);
+  color: #ffffff;
+}
+
+.powered {
+  font-size: clamp(13px, 1.45vw, 28px);
+  font-weight: 500;
+}
+
+.drMark {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  width: clamp(55px, 5vw, 96px);
+  height: clamp(36px, 3.55vw, 68px);
+  color: #ffffff;
+  font-size: clamp(34px, 3.75vw, 72px);
+  font-weight: 900;
+  line-height: 0.9;
+  letter-spacing: 0;
+}
+
+.drMark::before,
+.drMark::after {
+  content: "";
+  position: absolute;
+  bottom: 2px;
+  width: 9%;
+  height: 54%;
+  background: #8db9e8;
+}
+
+.drMark::before {
+  left: 26%;
+}
+
+.drMark::after {
+  left: 39%;
+  height: 38%;
+}
+
+.footerText {
+  font-size: clamp(14px, 1.45vw, 28px);
+  font-weight: 500;
+  letter-spacing: 0.17em;
+  white-space: nowrap;
 }
