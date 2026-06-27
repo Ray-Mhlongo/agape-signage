@@ -1,0 +1,378 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --agape-blue:       #3B8CC8;
+  --agape-blue-dark:  #1A5C9A;
+  --agape-blue-light: #5AAEDD;
+  --agape-blue-pale:  #D6ECFA;
+  --agape-blue-tint:  #EEF7FD;
+  --white:            #FFFFFF;
+  --text-dark:        #0D2A45;
+  --text-mid:         #2A5070;
+  --text-light:       #6A9CB8;
+  --footer-h:         56px;
+}
+
+html, body {
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background: #1a1a1a;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.canvas {
+  width: 1920px;
+  height: 1080px;
+  display: flex;
+  position: relative;
+  background: var(--white);
+}
+
+/* ── PANELS ─────────────────────────────────────────────────── */
+.panel {
+  height: calc(1080px - var(--footer-h));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-panel {
+  width: 820px;
+  background: var(--white);
+  border-right: 2px solid var(--agape-blue-pale);
+  flex-shrink: 0;
+}
+
+.right-panel {
+  flex: 1;
+  background: var(--agape-blue-tint);
+}
+
+/* ── LEFT CONTENT ────────────────────────────────────────────── */
+.left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 72px;
+}
+
+.logo-block {
+  margin-bottom: 20px;
+}
+
+.agape-logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  display: block;
+}
+
+.church-name-block {
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.church-name {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--agape-blue-dark);
+  margin-bottom: 8px;
+}
+
+.tagline-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.tagline-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--agape-blue-light);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.tagline {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--agape-blue-light);
+}
+
+.divider {
+  width: 64px;
+  height: 2px;
+  background: var(--agape-blue-pale);
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+/* ── WELCOME ─────────────────────────────────────────────────── */
+.welcome-heading {
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 0.92;
+  letter-spacing: -0.04em;
+  color: var(--agape-blue-dark);
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.welcome-sub {
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--text-mid);
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.instruction-text {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--text-mid);
+  text-align: center;
+  line-height: 1.6;
+  margin-bottom: 36px;
+}
+
+.instruction-text strong {
+  font-weight: 700;
+  color: var(--agape-blue-dark);
+}
+
+/* ── WHY ROW ─────────────────────────────────────────────────── */
+.why-row {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1.5px solid var(--agape-blue-pale);
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--agape-blue-tint);
+  width: 100%;
+}
+
+.why-item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 20px 12px;
+}
+
+.why-item span {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--agape-blue-dark);
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.why-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: 1.5px solid var(--agape-blue);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--agape-blue-dark);
+}
+
+.why-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.why-sep {
+  width: 1px;
+  height: 60px;
+  background: var(--agape-blue-pale);
+  flex-shrink: 0;
+}
+
+/* ── RIGHT CONTENT ───────────────────────────────────────────── */
+.right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 0 60px;
+}
+
+/* ── SCAN BADGE ──────────────────────────────────────────────── */
+.scan-badge {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--agape-blue-dark);
+  color: var(--white);
+  padding: 12px 36px;
+  border-radius: 999px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 20px rgba(26, 92, 154, 0.3);
+}
+
+.scan-badge-text {
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.scan-badge-line {
+  width: 32px;
+  height: 2px;
+  background: rgba(255,255,255,0.35);
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.scan-icon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+/* ── QR FRAME ────────────────────────────────────────────────── */
+.qr-frame {
+  width: 560px;
+  height: 560px;
+  border-radius: 24px;
+  border: 3px solid var(--agape-blue);
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 40px rgba(59, 140, 200, 0.18), 0 2px 12px rgba(0,0,0,0.06);
+  position: relative;
+}
+
+.qr-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 8px;
+  display: block;
+}
+
+.qr-missing {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  text-align: center;
+  color: var(--agape-blue);
+}
+
+.qr-missing p {
+  font-size: 14px;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+
+.qr-missing code {
+  font-size: 12px;
+  background: var(--agape-blue-pale);
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: var(--agape-blue-dark);
+}
+
+/* ── TIME PILL ───────────────────────────────────────────────── */
+.time-pill {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--agape-blue);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 600;
+  padding: 11px 28px;
+  border-radius: 999px;
+  margin-bottom: 22px;
+  letter-spacing: 0.02em;
+}
+
+.time-pill svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+/* ── QR CAPTION ──────────────────────────────────────────────── */
+.qr-caption {
+  font-size: 17px;
+  font-weight: 400;
+  color: var(--text-mid);
+  text-align: center;
+  line-height: 1.65;
+}
+
+.qr-caption strong {
+  font-weight: 700;
+  color: var(--agape-blue-dark);
+}
+
+/* ── FOOTER ──────────────────────────────────────────────────── */
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--footer-h);
+  background: var(--agape-blue-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  z-index: 10;
+}
+
+.footer-logo {
+  height: 30px;
+  width: auto;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+  opacity: 0.85;
+}
+
+.footer-sep {
+  width: 1px;
+  height: 22px;
+  background: rgba(255,255,255,0.2);
+}
+
+.footer-label {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+}
+
+.footer-brand {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.88);
+}
