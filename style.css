@@ -84,19 +84,12 @@ h1 {
 }
 
 .welcomeNote {
-  margin: 0.9% 0 1.1%;
+  margin: 0.9% 0 1.25%;
   color: #063985;
   font-size: clamp(14px, 1.42cqw, 27px);
   font-style: italic;
   font-weight: 500;
   letter-spacing: 0.02em;
-}
-
-.smallRule {
-  width: 4.7%;
-  height: 2px;
-  margin-bottom: 1.25%;
-  background: #1c82d1;
 }
 
 .registrationCopy {
@@ -265,7 +258,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2%;
+  gap: 1.55%;
   background: linear-gradient(90deg, #003984 0%, #064aa2 55%, #003984 100%);
   color: #ffffff;
 }
@@ -278,34 +271,53 @@ footer {
 .drMark {
   position: relative;
   display: inline-flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
-  width: clamp(50px, 4.5cqw, 86px);
-  height: clamp(34px, 3.2cqw, 61px);
+  width: clamp(54px, 4.85cqw, 93px);
+  height: clamp(36px, 3.35cqw, 64px);
   color: #ffffff;
-  font-size: clamp(32px, 3.35cqw, 64px);
+  font-size: clamp(34px, 3.55cqw, 68px);
   font-weight: 900;
-  line-height: 0.9;
+  line-height: 1;
   letter-spacing: 0;
 }
 
-.drMark::before,
-.drMark::after {
-  content: "";
+.drLetters {
+  position: relative;
+  z-index: 2;
+  display: block;
+  transform: scaleX(1.04);
+}
+
+.drBars {
   position: absolute;
-  bottom: 2px;
-  width: 9%;
-  height: 54%;
-  background: #8db9e8;
+  z-index: 3;
+  left: 21%;
+  bottom: 14%;
+  display: flex;
+  align-items: flex-end;
+  gap: 4%;
+  width: 20%;
+  height: 51%;
+  pointer-events: none;
 }
 
-.drMark::before {
-  left: 26%;
+.drBars span {
+  display: block;
+  width: 28%;
+  background: #8ebbe8;
 }
 
-.drMark::after {
-  left: 39%;
-  height: 38%;
+.drBars span:nth-child(1) {
+  height: 100%;
+}
+
+.drBars span:nth-child(2) {
+  height: 74%;
+}
+
+.drBars span:nth-child(3) {
+  height: 48%;
 }
 
 .footerText {
